@@ -1,8 +1,26 @@
-## Put comments here that give an overall description of what your
-## functions do
+##################################################
+# Solution to programing assignment 2 for the
+# R Programming course in the Coursera Data Sciende
+# Specialization. This assignment consists of two
+# functions 'cacheSolve' which  computes the inverse
+# of the matrix returned from a call to 'makeCacheMatrix'
+# If the inverse has already been calculated
+# (and the matrix has not changed), then
+# 'cachesolve' will retrieve the inverse from the cache
+# otherwise 'cacheSolve will calculate and cache
+# the inverse.
+##################################################
 
-## Write a short comment describing this function
-
+##################################################
+# makeCacheMatrix
+# arguments:
+#   a matrix (assumed to be invertible)
+# returns:
+#   a list of functions -set, get, setinverse, and
+#   getinvers - which cache the matrix  and its inverse
+#   in the global environment and retrieves the
+#   matrix and its inverse from the global environment
+##################################################
 makeCacheMatrix <- function(x = matrix()) {
         m <- NULL
         set <- function(y) {
@@ -17,11 +35,15 @@ makeCacheMatrix <- function(x = matrix()) {
              getinverse = getinverse)
 }
 
-
-## Write a short comment describing this function
-
+##################################################
+# cacheSolve
+# arguments:
+#   a matrix retrieved from a previous call to
+#   makeCacheMatrix
+# returns:
+#   the inverse of the argument matrix
+##################################################
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
         m <- x$getinverse()
         if(!is.null(m)) {
                 message("getting cached data")
