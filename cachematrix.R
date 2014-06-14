@@ -38,10 +38,11 @@ makeCacheMatrix <- function(x = matrix()) {
 ##################################################
 # cacheSolve
 # arguments:
-#   a matrix retrieved from a previous call to
+#   a list returned from a previous call to
 #   makeCacheMatrix
 # returns:
-#   the inverse of the argument matrix
+#   the inverse of the matrix cached by
+#   makeCacheMatrix
 ##################################################
 cacheSolve <- function(x, ...) {
         m <- x$getinverse()
