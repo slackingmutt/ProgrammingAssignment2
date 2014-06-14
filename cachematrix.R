@@ -1,12 +1,12 @@
 ##################################################
 # Solution to programing assignment 2 for the
-# R Programming course in the Coursera Data Sciende
+# R Programming course in the Coursera Data Science
 # Specialization. This assignment consists of two
 # functions 'cacheSolve' which  computes the inverse
-# of the matrix returned from a call to 'makeCacheMatrix'
+# of the matrix cached by a call to 'makeCacheMatrix'.
 # If the inverse has already been calculated
 # (and the matrix has not changed), then
-# 'cachesolve' will retrieve the inverse from the cache
+# 'cacheSolve' will retrieve the inverse from the cache
 # otherwise 'cacheSolve will calculate and cache
 # the inverse.
 ##################################################
@@ -17,7 +17,7 @@
 #   a matrix (assumed to be invertible)
 # returns:
 #   a list of functions -set, get, setinverse, and
-#   getinvers - which cache the matrix  and its inverse
+#   getinverse - which cache the matrix  and its inverse
 #   in the global environment and retrieves the
 #   matrix and its inverse from the global environment
 ##################################################
